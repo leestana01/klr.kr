@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '../../media';
 import ContainerColumn from "../../Components/Container/ContainerColumn";
 import HeaderText from "../../Components/Text/HeaderText";
 import RegularText from '../../Components/Text/RegularText';
@@ -6,30 +7,47 @@ import RegularText from '../../Components/Text/RegularText';
 const BannerContainer = styled(ContainerColumn)`
     align-items: center;
     gap: 3rem;
-    padding: 3rem;
+    padding: 2rem;
     background: #FFEDDF;
-`
+`;
 
 const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%
-`
+`;
 const BannerHeader = styled(HeaderText)`
     font-size: 3rem;
-`
+
+    @media ${media.semi_mobile} {
+        font-size: 1.5rem;
+    }
+`;
 
 const BannerText = styled(RegularText)`
     font-size: 2rem;
-`
+
+    @media ${media.semi_mobile} {
+        font-size: 1.3rem;
+    }
+`;
 
 const BannerTextSmall = styled(RegularText)`
     font-size: 1.5rem;
-`
+
+    @media ${media.semi_mobile} {
+        font-size: 1rem;
+    }
+`;
 
 const Image = styled.img`
-`
+    width: 400px;
+
+    @media ${media.semi_mobile} {
+        width: 300px;
+    }
+`;
 
 export default function Component() {
 

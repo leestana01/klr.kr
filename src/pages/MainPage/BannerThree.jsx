@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '../../media';
 import ContainerColumn from "../../Components/Container/ContainerColumn";
 import HeaderText from "../../Components/Text/HeaderText";
 import RegularText from '../../Components/Text/RegularText';
@@ -7,32 +8,57 @@ import ContainerCenter from '../../Components/Container/ContainerCenter';
 
 const BannerContainer = styled(ContainerColumn)`
     align-items: end;
-    padding: 3rem;
-`
+    padding: 1rem 1.5rem;
+`;
 
 const BannerHeader = styled(HeaderText)`
     font-size: 3rem;
-`
+
+    @media ${media.tablet} {
+        font-size: 2rem;
+    }
+    @media ${media.semi_mobile} {
+        font-size: 1.5rem;
+    }
+`;
 
 const BannerText = styled(RegularText)`
     font-size: 2rem;
-`
+
+    @media ${media.tablet} {
+        font-size: 1.3rem;
+    }
+    @media ${media.semi_mobile} {
+        font-size: 1rem;
+    }
+`;
+
 const WordContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: ${props => props.$justify_content};
     width: 100%;
     padding: 0.5rem;
-`
+`;
 
 const WordBox = styled.div`
     background: ${props => props.$background};
     padding: 0.5rem;
-`
+`;
 
 const WordText = styled(HeaderText)`
     font-size: 3rem;
-`
+
+    @media (max-width: 920px){
+        font-size: 2rem;
+    }
+    @media ${media.tablet}{
+        font-size: 1.5rem;
+    }
+    @media ${media.semi_mobile}{
+        font-size: 0.7rem;
+    }
+`;
 
 export default function Component() {
 

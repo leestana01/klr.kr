@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../media";
 import RegularText from "../Text/RegularText";
 import SizedBoxColumn from "../SizedBox/SizedBoxColumn";
 import HeaderText from "../Text/HeaderText";
@@ -36,6 +37,10 @@ const AlertContainer = styled.div`
 
 const AlertText = styled(HeaderText)`
     font-size: 1.5rem;
+
+    @media ${media.semi_mobile}{
+        font-size: 1.3rem;
+    }
 `
 
 export default function Component(){
@@ -57,7 +62,8 @@ export default function Component(){
 
             <AlertContainer>
                 <AlertText>현재 시범 운용 단계입니다.</AlertText>
-                <AlertText>작업하신 도메인 내역은 언제든지 고지없이 삭제될 수 있습니다.</AlertText>
+                <AlertText>작업하신 도메인 내역은</AlertText>
+                <AlertText>언제든지 고지없이 삭제될 수 있습니다.</AlertText>
             </AlertContainer>
         </FooterContainer>
     )
