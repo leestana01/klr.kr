@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Header from "../Components/Header/Header";
+import Header from "../Components/Header&Footer/Header";
+import Footer from "../Components/Header&Footer/Footer"
 
 
 export default function Component() {
@@ -7,6 +8,7 @@ export default function Component() {
         <>
             <Header/>
             <Outlet/>
+            <Footer/>
         </>
     )
 }

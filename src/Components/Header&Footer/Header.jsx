@@ -1,8 +1,15 @@
 import { styled } from "styled-components";
-import ContainerRow from "../Container/ContainerRow";
 import HeaderText from "../Text/HeaderText";
 
-const LoginText = styled.text`
+const HeaderContainer = styled.header`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+`
+
+const LoginText = styled.p`
     font-size: 1rem;
 `
 const LoginContainer = styled.div`
@@ -12,13 +19,13 @@ const LoginContainer = styled.div`
 
 export default function Component(){
     return (
-        <ContainerRow $padding="1rem">
+        <HeaderContainer>
             <HeaderText $font_size="1.5rem">KLR.KR</HeaderText>
             <LoginContainer>
                 <LoginText>로그인</LoginText>
                 <LoginText>|</LoginText>
                 <LoginText>회원가입</LoginText>
             </LoginContainer>
-        </ContainerRow>
+        </HeaderContainer>
     )
 }
